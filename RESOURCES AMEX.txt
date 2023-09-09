@@ -1,0 +1,77 @@
+1) gcp-foundation:
+   1) p-hcf-gcp-foundation
+
+
+2) Networking :
+   
+   2.1  nonprod networking
+   a) i) network-nonprod-e0(customer)
+      
+      
+    ii)network-nonprod-e0(network)
+      
+      
+    iii) network-nonprod-e0(security)
+     
+    
+    b) i) network-nonprod-e1(customer)
+       
+      ii) network-nonprod1-e1(network)
+      
+     iii)  network-nonprod1-e1(security)
+      
+    c) i) network-nonprod-e2(customer)
+      
+       ii) network-nonprod-e2(network)
+       
+       
+       iii) network-nonprod-e2(security)
+          
+       
+       
+ 2) 2.2 prod networking module
+   i) network-prod-e3(customer)
+ 
+    
+   ii) network-prod-e3(network)
+     
+   
+ 3) 2.3 shared services networking
+     
+     ii) shared-services-networking(network)
+       
+       
+     ii) shared-services-networking(security)
+     
+ 4) 2.4-Network prod Tunnels 
+ 5) 2.4-Network Tunnels(anon, nonprod, shared)
+ 6) 2.5-Network Nonprod tunnels
+ 7) 2.6-Network shared services tunnels
+        
+ 8) 2.7 network-anonymize 
+    a) Customer
+    b) network
+    c) security
+ 
+ 
+ IAM: 1) p-hcf-gcp-iam-roles
+      2) p-hcf-gcp-iam-bindings
+      
+      
+ Logging: 1) l-hcf-gcp-foundation-logging
+          2) t-hcf-gcp-foundation-logging
+          3) d-hcf-gcp-foundation-logging
+          4) p-hcf-gcp-foundation-logging
+          
+          
+VPC-Service-Control:
+ 1) p-hcf-gcp-vpc-service-controls
+ 2) t-hcf-gcp-vpc-service-controls
+ 3) p-hcf-gcp-anon-vpc-service-controls
+ 4) p-hcf-gcp-shared-vpc-service-controls
+          
+      
+   
+ 
+ 
+ 

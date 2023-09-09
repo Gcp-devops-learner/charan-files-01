@@ -1,0 +1,131 @@
+5. Ensure that the 'log_checkpoints' database flag for Cloud SQL PostgreSQL instance is set to 'on'.
+6. Ensure 'log_error_verbosity' database flag for Cloud SQL PostgreSQL instance is set to 'DEFAULT' or stricter.
+7. Ensure that the 'log_connections' database flag for Cloud SQL PostgreSQL instance is set to 'on'.
+8. Ensure that the 'log_disconnections' database flag for Cloud SQL PostgreSQL instance is set to 'on'.
+9. Ensure 'log_duration' database flag for Cloud SQL PostgreSQL instance is set to 'on'.
+10. Ensure that the 'log_lock_waits' database flag for Cloud SQL PostgreSQL instance is set to 'on'.
+11. Ensure 'log_statement' database flag for Cloud SQL PostgreSQL instance is set appropriately.==>????
+12. Ensure 'log_hostname' database flag for Cloud SQL PostgreSQL instance is set appropriately.==>????
+13. Ensure 'log_parser_stats' database flag for Cloud SQL PostgreSQL instance is set to 'off'.
+14. Ensure 'log_planner_stats' database flag for Cloud SQL PostgreSQL instance is set to 'off'.
+15. Ensure 'log_executor_stats' database flag for Cloud SQL PostgreSQL instance is set to 'off'.
+16. Ensure 'log_statement_stats' database flag for Cloud SQL PostgreSQL instance is set to 'off'.
+17. Ensure that the 'log_min_messages' database flag for Cloud SQL PostgreSQL instance is set appropriately.===???
+18. Ensure 'log_min_error_statement' database flag for Cloud SQL PostgreSQL instance is set to 'Error' or stricter.
+19. Ensure that the 'log_temp_files' database flag for Cloud SQL PostgreSQL instance is set to '0' (on).
+20. Ensure that the 'log_min_duration_statement' database flag for Cloud SQL PostgreSQL instance is set to '-1' (disabled).
+
+28. Ensure that the Cloud SQL database instance requires all incoming connections to use SSL.
+29. Ensure that Cloud SQL database instances are not open to the world.
+30. Ensure that Cloud SQL database instances do not have public IPs.
+31. Ensure that Cloud SQL database instances are configured with automated backups.
+
+h. A newly-created instance has four system databases: information_schema, mysql, performance_schema, and sys.
+n. Each Cloud SQL instance is powered by a virtual machine (VM) running on a host Google Cloud server.
+o. Each VM operates the database program, such as MySQL Server, PostgreSQL, or SQL Server, and service agents that provide
+p. supporting services, such as logging and monitoring.
+q. The high availability option also provides a standby VM in another zone with a configuration that's identical to the primary VM.
+
+database_flags = [
+  { name = "autovacuum", value = "off" },
+  { name = "log_checkpoints", value = "on" },
+  { name = "log_error_verbosity", value = "DEFAULT" },
+  { name = "log_connections", value = "on" },
+  { name = "log_disconnections", value = "on" },
+  { name = "log_duration", value = "on" },
+  { name = "log_lock_waits", value = "on" },
+  { name = "log_statement", value = "" },
+  { name = "log_hostname", value = "" },
+  { name = "log_parser_stats", value = "off" },
+  { name = "log_planner_stats", value = "off" },
+  { name = "log_executor_stats", value = "off" },
+  { name = "log_statement_stats", value = "off" },
+  { name = "log_min_messages", value = "off" },
+  { name = "log_min_error_statement", value = "Error" },
+  { name = "log_temp_files", value = "0" },
+  { name = "log_min_duration_statement", value = "-1" }
+  
+]
+  
+  
+  
+  
+  
+ 
+database_flags = [
+  { name = "log_checkpoints", value = "on" }
+]
+database_flags = [
+  { name = "log_error_verbosity", value = "DEFAULT" }
+]
+database_flags = [
+  { name = "log_connections", value = "on" }
+]
+database_flags = [
+  { name = "log_disconnections", value = "on" }
+]
+database_flags = [
+  { name = "log_duration", value = "on" }
+]
+database_flags = [
+  { name = "log_lock_waits", value = "on" }
+]
+database_flags = [
+  { name = "log_statement", value = "" }
+]
+database_flags = [
+  { name = "log_hostname", value = "" }
+]
+database_flags = [
+  { name = "log_parser_stats", value = "off" }
+]
+database_flags = [
+  { name = "log_planner_stats", value = "off" }
+]
+database_flags = [
+  { name = "log_executor_stats", value = "off" }
+]
+database_flags = [
+  { name = "log_statement_stats", value = "off" }
+]
+database_flags = [
+  { name = "log_min_messages", value = "off" }
+]
+database_flags = [
+  { name = "log_min_error_statement", value = "Error" }
+]
+database_flags = [
+  { name = "log_temp_files", value = "0" }
+]
+database_flags = [
+  { name = "log_min_duration_statement", value = "-1" }
+]
+
+
+user_labels = {
+  env                      = "aexp-app-env"
+  data-classification      = "aexp-data-classification"
+  carid                    = "aexp-app-carid"
+  name                     = "aexp-app-name"
+  tier                     = "aexp-app-tier"
+  ops-supportgroup         = "aexp-ops-supportgroup"
+  app-supportgroup         = "aexp-app-supportgroup"
+  lifecycle-changenumber   = "aexp-lifecycle-changenumber"
+  }
+
+Security Requirements ::
+
+All Cloud SQL instances and its data must be stored in us-east4 region.
+Multi-region backup locations are confined to Amex-approved regions.
+All Cloud SQL instances must be configured and launched using Private IP.
+CloudSQL instances must exist in a service perimeter.
+Cloning must be confined to the CloudSQL instances' service perimeter.
+Connections to CloudSQL instances are to be managed by an IP address allowlist, with a default policy of deny all. Allowances to the IPv4
+access control list (ACL) must come from Information Security approved CIDR ranges.
+GCS buckets used for the migration flow must reside in the same subnet as the CloudSQL private IPv4 and service perimeter, until such time that
+cross-perimeter traffic is allowed.
+Public IPs cannot be allocated to Cloud SQL.
+IPv6 addresses are disallowed from being used.
+Sensitive Data Elements must be encrypted client-side before writing it to Cloud SQL.
+Only PostgreSQL is allowed to be used in CloudSQL.
+Data Access Audit logs must be turned on for Cloud SQL.

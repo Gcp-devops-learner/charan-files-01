@@ -1,0 +1,452 @@
+org id "678233521001"
+
+role_id : "org_security_poweruser"
+
+PRC-AXP-BAE2-AppAdminGCP-CloudSec 
+
+IAM ORG Modules:
+===============
+1) cloud security poweruser 
+2) infosec audit 
+3) iam poweruser 
+4) network security eng poweruser
+5) siem poweruser 
+6) ir poweruser 
+7) ddi poweruser
+8) billing poweruser
+9) network poweruser 
+10) product poweruser 
+11) crypto poweruser 
+12) cloudeng admin
+13) cloudeng poweruser 
+
+
+
+Module 2:
+=========Cloud Security Poweruser: PRC_ORG
+
+(roles/resourcemanager.organizationViewer),(roles/orgpolicy.policyViewer), (roles/securitycenter.adminViewer),(roles/logging.privateLogViewer), (roles/container.viewer) (roles/compute.viewer),(roles/bigquery.metadataViewer)
+
+roles/iam.securityReviewer
+roles/iam.organizationRoleViewer
+roles/orgpolicy.policyViewer
+
+roles/logging.privateLogViewer
+
+roles/container.viewer
+
+roles/compute.viewer
+
+roles/bigquery.dataViewer
+
+roles/securitycenter.admin
+
+
+Module 3:
+==========Infosec audit : PRC_ORG
+
+PRC group: PRC-AXP-AAE3-Compl-SecGCPInfosecAudit  
+role id : org_infosecaudit_viewer
+
+roles/resourcemanager.organizationViewer
+roles/iam.securityReviewer
+
+
+/*Module 4: IAM Admin : PRC-LAB  
+
+#role id: org_iam_admin  
+#PRC group: PRC-AXP-BAE2-AppAdminGCP-IAM
+
+#roles/resourcemanager.organizationAdmin
+#roles/resourcemanager.folderIamAdmin
+#Iam workload Identity pool viewer beta
+#Iam security admin(roles/iam.securityAdmin)
+*/
+
+
+Module 5: 
+==========IAM Poweruser : PRC-ORG
+
+role id: org_iam_poweruse 
+PRC group: PRC-AXP-BAE2-AppAdminGCP-IAM 
+
+roles/iam.organizationRoleViewer
+(roles/iam.workloadIdentityPoolViewer)
+(roles/iam.securityReviewer)
+
+#Iam workload Identity pool viewer beta
+#Iam Security Reviewer
+
+Module 7: 
+==========Network Security Eng poweruser: PRC-ORG (doubt)
+
+role id: org_netsec_poweruser
+PRC group: PRC-AXP-BAE2-AppAdminGCP-NetSec
+           PRC-AXP-BAE2-AppAdminGCPNetSecOps
+           
+roles/compute.orgFirewallPolicyAdmin
+roles/accesscontextmanager.policyReader
+
+
+Module 9: 
+==========SIEM Poweruser : PRC-ORG
+
+role id: org_siem_poweruser
+PRC group: PRC-AXP-BAE2-AppAdminGCP-SIEM
+
+roles/logging.viewer
+roles/monitoring.viewer
+
+Module 11:
+=============IR Poweruser : PRC-ORG
+
+role id: org_ir_poweruser
+
+PRC group: PRC-AXP-BAE2-AppAdminGCPInfosecMonitoring
+
+roles/resourcemanager.organizationViewer
+roles/securitycenter.adminViewer
+
+Module 13:
+==============Crypto Poweruser : PRC-ORG (doubt)
+
+role id: org_crypto_poweruser
+PRC group: PRC-AXP-BAE2-AppAdminGCP-Crypto
+
+roles/cloudkms.admin
+
+
+Module 14:
+====================CloudEng Admin : PRC-ORG
+
+role id : org_corefoundation_admin
+PRC group: PRC-AXP-BAE2-AppAdminGCP-CF
+
+roles/resourcemanager.organizationAdmin
+roles/resourcemanager.folderAdmin
+roles/resourcemanager.projectCreator
+roles/billing.user
+roles/billing.viewer
+roles/iam.organizationRoleViewer
+roles/orgpolicy.policyAdmin
+roles/cloudsupport.admin
+roles/container.admin
+roles/compute.admin
+roles/logging.admin
+roles/monitoring.admin
+roles/iam.serviceAccountUser
+
+
+Module 15:
+====================CloudEng Poweruser : PRC-ORG
+
+role id: org_corefoundation_poweruser
+PRC group: PRC-AXP-BAE2-AppAdminGCP-C
+
+roles/resourcemanager.organizationViewer
+roles/resourcemanager.folderViewer
+roles/billing.viewer
+roles/iam.organizationRoleViewer
+roles/orgpolicy.policyViewer
+roles/cloudsupport.techSupportViewer
+roles/container.viewer
+roles/compute.viewer
+roles/logging.viewer
+roles/monitoring.viewer
+
+Module 17: 
+=================DDI poweruser : PRC-ORG
+
+role id: org_ddi_poweruser
+PRC group: PRC-AXP-AAE2-AppAdminGCP-DDI
+
+roles/dns.reader
+
+
+Module 21: 
+====================Billing Poweruser : PRC-ORG
+
+role id : org_billing_viewer
+PRC group: PRC-AXP-BAE2-AppAdminGCP-Billing
+
+roles/billing.viewer
+roles/resourcemanager.organizationViewer
+
+
+Module 23: 
+================Network Poweruser : PRC-ORG (doubt)
+
+role id : org_network_poweruser
+PRC group: PRC-AXP-BAE3-AppAdminAWS-DCE
+           PRC-AXP-BAE3-AppAdminAWS-GNOC
+           
+roles/compute.networkViewer
+roles/resourcemanager.folderViewer
+roles/viewer
+
+
+Module 27: Product poweruser : PRC-ORG
+
+role id: org_product_pu E0:E1-E3
+PRC group: PRC-AXP-PUE2-AppSuppGCP-CEProduct 
+
+roles/cloudasset.viewer
+
+
+
+/************ IAM LAB-MODULES ******************/
+
+IAM-LAB-MODULES:
+
+1) Cloud Security Admin
+2) IAM Admin
+3) Network security Eng admin
+4) SIEM Admin
+5) IR Admin
+6) Crypto Admin
+7) DDI Admin
+8) Billing Admin 
+9) Network Admin
+10) cloudsolutions poweruser
+11) CloudQE Poweruser
+12) CICD poweruser 
+
+Module 1: Cloud Security Admin : PRC_LAB
+
+role id: org_security_admin
+PRC group : PRC-AXP-BAE2-AppAdminGCP-CloudSec
+
+roles/resourcemanager.organizationViewer
+roles/orgpolicy.policyAdmin
+roles/iam.securityReviewer
+roles/securitycenter.admin
+roles/logging.privateLogViewer
+roles/logging.configWriter
+roles/container.viewer
+roles/compute.viewer
+roles/bigquery.metadataViewer
+
+
+============
+
+Module 4: IAM Admin : PRC-LAB
+
+role id : org_iam_admin
+PRC group: PRC-AXP-BAE2-AppAdminGCP-IAM
+
+roles/iam.organizationRoleAdmin
+roles/resourcemanager.folderIamAdmin
+roles/iam.workloadIdentityPoolAdmin
+roles/iam.securityAdmin
+=====================
+Module 6: Network security Eng admin : PRC-LAB
+
+role id : org_netsec_admin
+PRC group:  PRC-AXP-BAE2-AppAdminGCP-NetSec
+            PRC-AXP-BAE2-AppAdminGCPNetSecOp
+            
+roles/compute.securityAdmin
+roles/accesscontextmanager.policyAdmin
+
+==================
+
+Module 8: SIEM Admin : PRC-LAB
+
+role id : org_siem_admin
+PRC group: PRC-AXP-BAE2-AppAdminGCP-SIEM
+
+roles/logging.viewer
+roles/monitoring.viewer
+
+=====================
+Module 10: IR Admin : PRC-LAB
+
+role id: org_ir_admin
+PRC group: PRC-AXP-BAE2-AppAdminGCPInfosecMonitoring
+
+roles/resourcemanager.organizationViewer
+roles/securitycenter.adminViewer
+
+==================
+
+Module 12: Crypto Admin : PRC-LAB
+
+role id : org_crypto_admin
+PRC group: PRC-AXP-BAE2-AppAdminGCP-Crypto
+
+roles/cloudkms.admin
+
+
+=======================
+
+Module 16: DDI Admin : PRC-LAB
+
+role id: org_ddi_admin
+PRC group: PRC-AXP-AAE2-AppAdminGCP-DDI
+
+roles/dns.admin
+
+=======================
+
+Module 20: Billing Admin : PRC-LAB
+
+role id: org_billing_admin
+PRC group: PRC-AXP-BAE2-AppAdminGCP-Billing
+
+roles/billing.admin
+roles/billing.creator
+roles/resourcemanager.organizationViewer
+
+==========================
+
+Module 22: Network Admin : PRC-LAB 
+
+role id: org_network_admin
+PRC group: PRC-AXP-BAE3-AppAdminAWS-DCE , PRC-AXP-BAE3-AppAdminAWS-GNOC
+
+roles/compute.networkAdmin
+roles/compute.xpnAdmin
+roles/resourcemanager.folderViewer
+(roles/owner)
+
+===================================
+
+Module 24: cloudsolutions poweruser : PRC-LAB
+
+role id: org_solutions_puE0:E1-E3:
+PRC group: PRC-AXP-PUE2-AppAdminGCP-Dev-Eng
+
+roles/resourcemanager.projectCreator
+roles/compute.networkUser
+roles/bigquery.dataOwner
+roles/bigquery.user
+roles/dataproc.admin
+roles/storage.admin
+roles/logging.logWriter
+roles/logging.privateLogViewer
+
+=====================================
+
+Module 25: CloudQE Poweruser : PRC-LAB
+
+role id: org_quality_puE0:E1-E3: 
+PRC group: PRC-AXP-PUE2-AppAdminGCP-TESTEng
+
+roles/resourcemanager.projectCreator
+roles/compute.networkUser
+roles/bigquery.dataOwner
+roles/bigquery.user
+roles/dataproc.admin
+roles/storage.admin
+roles/logging.logWriter
+roles/logging.privateLogViewer
+
+=====================================
+
+Module 26: CICD poweruser : PRC_LAB (Doubt NO ROLES)
+
+role id: org_cicd_puE0:E1-E3:
+PRC group: PRC-AXP-PUE2-AppAdminGCP-CICD
+
+========================================
+
+Module 18: CloudOpsAdmin : PRC-LAB (Doubt NO Roles)
+
+role id: org_cloudops_admin
+PRC group: PRC-AXP-PUE2-AppAdminGCP-Dev-Ops
+
+============================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+           
+           
+
+
+
+
+
+
+
+

@@ -1,0 +1,89 @@
+IAM-LAB-MODULES:
+================
+1) Cloud Security Admin
+2) IAM Admin
+3) Network security Eng admin
+4) SIEM Admin
+5) IR Admin
+6) Crypto Admin
+7) DDI Admin
+8) Billing Admin 
+9) Network Admin
+10) cloudsolutions poweruser
+11) CloudQE Poweruser
+
+IAM ORG Modules:
+===============
+1) cloud security poweruser 
+2) infosec audit 
+3) iam poweruser 
+4) network security eng poweruser
+5) siem poweruser 
+6) ir poweruser 
+7) ddi poweruser
+8) billing poweruser
+9) network poweruser 
+10) product poweruser 
+11) crypto poweruser 
+12) cloudeng admin
+13) cloudeng poweruser
+
+
+IAM-PRC-LAB(Pending)
+===========
+1) CICD poweruser
+2) CloudOps Admin
+
+
+IAM-PRC-ORG(Pending)
+===========
+1) Crypto poweruser
+2) CloudOps poweruser
+
+
+IAM Admin:
+==========
+1) Cloud Security Admin
+2) IAM Admin
+3) Network security Eng admin
+4) SIEM Admin
+5) IR Admin
+6) Crypto Admin
+7) DDI Admin
+8) Billing Admin 
+9) Network Admin
+10) cloudeng admin
+
+IAM Poweruser:
+============
+1) cloudsolutions poweruser
+2) CloudQE Poweruser
+3) CICD poweruser
+4) cloud security poweruser 
+5) iam poweruser 
+6) network security eng poweruser
+7) siem poweruser 
+8) ir poweruser 
+9) ddi poweruser
+10) billing poweruser
+11) network poweruser 
+12) product poweruser 
+13) crypto poweruser 
+14) cloudeng poweruser
+
+
+IAM Code changes:
+All Poweruser roles binding at the Org level 
+All Admin roles (except Cloud Eng Admin) binding at the POC project(i.e. prj-l-600001687-poc) for all PRC groups
+All Admin roles (except Cloud Eng Admin) binding at the folder GI (first level folder) for all service accounts
+Cloud Eng Admin role binding at the Org level
+IAM code format changes:
+One file (or module) to create role by only binding permissions with nodes (org/folder/project)
+Second file to use roles created in the first step and bind with either PRC group or Service account
+In the code, replace predefined role with list of permissions:
+Comment predefined roles. (to keep the reference of list of roles used for creating the custom role) 
+Add list of permissions in the separate file
+Permissions to be passed as parameterized values to keep the code structure well as it is now.
+Resource Management code changes:
+Move folders Anonymized Data and Shared Services from GI to prod
+No changes in VPC Service control perimeter
